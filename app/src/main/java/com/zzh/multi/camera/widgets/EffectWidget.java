@@ -21,10 +21,10 @@ package com.zzh.multi.camera.widgets;
 
 import android.content.Context;
 import android.os.Build;
-import android.util.Log;
 
-import org.cyanogenmod.focal.CameraManager;
-import fr.xplod.focal.R;
+import com.zzh.multi.camera.CameraManager;
+import com.zzh.multi.camera.R;
+
 
 public class EffectWidget extends SimpleToggleWidget {
     private static final String KEY_EFFECT = "effect";

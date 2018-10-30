@@ -43,9 +43,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import org.cyanogenmod.focal.CameraActivity;
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.Util;
+
+import com.zzh.multi.camera.CameraActivity;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.Util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,7 +54,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * This class handles the review drawer that can be opened by swiping down
+ * @date: 2018/10/30
+ * @email: zzh_hz@126.com
+ * @QQ: 1299234582
+ * @author: zzh
+ * @description: ReviewDrawer.java
  */
 public class ReviewDrawer extends RelativeLayout {
     public final static String TAG = "ReviewDrawer";

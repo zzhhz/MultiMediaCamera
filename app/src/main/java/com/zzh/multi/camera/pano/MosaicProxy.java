@@ -41,19 +41,19 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import org.cyanogenmod.focal.CameraActivity;
-import org.cyanogenmod.focal.SnapshotManager;
-import org.cyanogenmod.focal.Storage;
-import org.cyanogenmod.focal.Util;
-import org.cyanogenmod.focal.feats.CaptureTransformer;
-import org.cyanogenmod.focal.ui.PanoProgressBar;
-import org.cyanogenmod.focal.ui.ShutterButton;
+import com.zzh.multi.camera.CameraActivity;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.SnapshotManager;
+import com.zzh.multi.camera.Storage;
+import com.zzh.multi.camera.Util;
+import com.zzh.multi.camera.feats.CaptureTransformer;
+import com.zzh.multi.camera.ui.PanoProgressBar;
+import com.zzh.multi.camera.ui.ShutterButton;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
-import fr.xplod.focal.R;
 
 /**
  * Nemesis interface to interact with Google's mosaic interface

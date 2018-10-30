@@ -28,10 +28,10 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 
-import org.cyanogenmod.focal.CameraActivity;
-import org.cyanogenmod.focal.SnapshotManager;
-import org.cyanogenmod.focal.Util;
-import org.cyanogenmod.focal.ui.ShutterButton;
+import com.zzh.multi.camera.CameraActivity;
+import com.zzh.multi.camera.SnapshotManager;
+import com.zzh.multi.camera.Util;
+import com.zzh.multi.camera.ui.ShutterButton;
 
 import java.io.File;
 import java.util.ArrayList;

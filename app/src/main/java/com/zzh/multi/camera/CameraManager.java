@@ -54,8 +54,6 @@ import java.util.StringTokenizer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import fr.xplod.focal.R;
-
 /**
  * This class is responsible for interacting with the Camera HAL.
  * It provides easy open/close, helper methods to set parameters or

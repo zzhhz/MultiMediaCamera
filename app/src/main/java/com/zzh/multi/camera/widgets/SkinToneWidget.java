@@ -23,9 +23,9 @@ import android.content.Context;
 import android.hardware.Camera;
 import android.view.View;
 
-import org.cyanogenmod.focal.CameraManager;
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.SettingsStorage;
+import com.zzh.multi.camera.CameraManager;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.SettingsStorage;
 
 /**
  * Skin Tone Enhancement widget (Qualcomm)

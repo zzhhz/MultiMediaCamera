@@ -20,17 +20,14 @@
 package com.zzh.multi.camera.picsphere;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.util.Log;
 
-import org.cyanogenmod.focal.PopenHelper;
-import org.cyanogenmod.focal.SnapshotManager;
-import org.cyanogenmod.focal.Util;
-import org.cyanogenmod.focal.XMPHelper;
+import com.zzh.multi.camera.PopenHelper;
+import com.zzh.multi.camera.SnapshotManager;
+import com.zzh.multi.camera.Util;
+import com.zzh.multi.camera.XMPHelper;
 
 import java.io.File;
 import java.io.IOException;

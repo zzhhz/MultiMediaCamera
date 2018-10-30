@@ -23,6 +23,7 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Point;
@@ -148,7 +149,7 @@ public class Util {
      * @return
      */
     public static Size getOptimalPreviewSize(Activity currentActivity,
-            List<Size> sizes, double targetRatio) {
+                                             List<Size> sizes, double targetRatio) {
         // Use a very small tolerance because we want an exact match.
         final double ASPECT_TOLERANCE = 0.01;
         if (sizes == null) {
@@ -193,6 +194,7 @@ public class Util {
 
     /**
      * Fade in a view from startAlpha to endAlpha during duration milliseconds
+     *
      * @param view
      * @param startAlpha
      * @param endAlpha
@@ -211,6 +213,7 @@ public class Util {
 
     /**
      * Fade in a view with the default time
+     *
      * @param view
      */
     public static void fadeIn(View view) {
@@ -234,10 +237,11 @@ public class Util {
 
     /**
      * Converts the provided byte array from YUV420SP into an RGBA bitmap.
+     *
      * @param context
      * @param yuv420sp The YUV420SP data
-     * @param width Width of the data's picture
-     * @param height Height of the data's picture
+     * @param width    Width of the data's picture
+     * @param height   Height of the data's picture
      * @return A decoded bitmap
      * @throws NullPointerException
      * @throws IllegalArgumentException
@@ -322,8 +326,8 @@ public class Util {
         final int frameSize = width * height;
         int[] rgb = new int[frameSize];
         for (int j = 0, yp = 0; j < height; j++) {
-            int up = frameSize + (j * (width/2)), u = 0, v = 0;
-            int vp = ((int)(frameSize*1.5) + (j*(width/2)));
+            int up = frameSize + (j * (width / 2)), u = 0, v = 0;
+            int vp = ((int) (frameSize * 1.5) + (j * (width / 2)));
             for (int i = 0; i < width; i++, yp++) {
                 int y = (0xff & ((int) yuv422p[yp])) - 16;
                 if (y < 0) {
@@ -374,6 +378,7 @@ public class Util {
 
     /**
      * Broadcast an intent to notify of a new picture in the Gallery
+     *
      * @param context
      * @param uri
      */
@@ -385,6 +390,7 @@ public class Util {
 
     /**
      * Removes an image from the gallery
+     *
      * @param cr
      * @param id
      */
@@ -395,6 +401,7 @@ public class Util {
 
     /**
      * Converts the specified DP to PIXELS according to current screen density
+     *
      * @param context
      * @param dp
      * @return
@@ -406,6 +413,7 @@ public class Util {
 
     /**
      * Returns the physical path (on emmc/sd) of the provided URI from MediaGallery
+     *
      * @param context
      * @param contentURI
      * @return
@@ -424,6 +432,7 @@ public class Util {
 
     /**
      * Returns the best Panorama preview size
+     *
      * @param supportedSizes
      * @param need4To3
      * @param needSmaller
@@ -456,13 +465,14 @@ public class Util {
 
     /**
      * Returns the best PicSphere picture size. The reference size is 2048x1536 from Nexus 4.
+     *
      * @param supportedSizes Supported picture size
-     * @param needSmaller If a larger image size is accepted
+     * @param needSmaller    If a larger image size is accepted
      * @return A Point where X and Y corresponds to Width and Height
      */
     public static Point findBestPicSpherePictureSize(List<Size> supportedSizes, boolean needSmaller) {
         Point output = null;
-        final int defaultPixels = 2048*1536;
+        final int defaultPixels = 2048 * 1536;
 
         int pixelsDiff = defaultPixels;
 
@@ -497,6 +507,7 @@ public class Util {
     /**
      * Older devices need to stop preview before taking a shot
      * (example: galaxy S, galaxy S2, etc)
+     *
      * @return true if the device is an old one
      */
     public static boolean deviceNeedsStopPreviewToShoot() {
@@ -504,12 +515,13 @@ public class Util {
 
         boolean needs = Arrays.asList(oldDevices).contains(Build.BOARD);
 
-        Log.e(TAG, "Device " + Build.BOARD + (needs ? " needs ": " doesn't need ") + "to stop preview");
+        Log.e(TAG, "Device " + Build.BOARD + (needs ? " needs " : " doesn't need ") + "to stop preview");
         return needs;
     }
 
     /**
      * Disable ZSL mode on certain Qualcomm models
+     *
      * @return true if the device needs ZSL disabled
      */
     public static boolean deviceNeedsDisableZSL() {
@@ -517,8 +529,28 @@ public class Util {
 
         boolean needs = Arrays.asList(noZSL).contains(Build.PRODUCT);
 
-        Log.e(TAG, "Device " + Build.PRODUCT + (needs ? " needs ": " doesn't need ") + "to disable ZSL");
+        Log.e(TAG, "Device " + Build.PRODUCT + (needs ? " needs " : " doesn't need ") + "to disable ZSL");
         return needs;
+    }
+
+    /**
+     * @param ctx
+     * @param flag
+     */
+    public static void saveRun(Context ctx, int flag) {
+        SharedPreferences sp = ctx.getSharedPreferences("XML_CAMERA", Context.MODE_PRIVATE);
+        SharedPreferences.Editor edit = sp.edit();
+        edit.putInt("keyRun", flag);
+        edit.commit();
+    }
+
+    /**
+     * @param ctx
+     * @return
+     */
+    public static int getRun(Context ctx) {
+        SharedPreferences sp = ctx.getSharedPreferences("XML_CAMERA", Context.MODE_PRIVATE);
+        return sp.getInt("keyRun", 0);
     }
 
 }

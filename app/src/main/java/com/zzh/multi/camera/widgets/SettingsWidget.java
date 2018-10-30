@@ -27,12 +27,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.NumberPicker;
 
-import org.cyanogenmod.focal.CameraActivity;
-import org.cyanogenmod.focal.CameraCapabilities;
-import org.cyanogenmod.focal.CameraManager;
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.SettingsStorage;
-import org.cyanogenmod.focal.SnapshotManager;
+import com.zzh.multi.camera.CameraActivity;
+import com.zzh.multi.camera.CameraCapabilities;
+import com.zzh.multi.camera.CameraManager;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.SettingsStorage;
+import com.zzh.multi.camera.SnapshotManager;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -194,7 +194,7 @@ public class SettingsWidget extends WidgetBase {
                             == CameraActivity.CAMERA_MODE_PICSPHERE) {
                         // Set picture size
                         Camera.Size size = mResolutions.get(mNumberPicker.getValue());
-                        // TODO: only one method
+                        //  only one method
                         mCamManager.setPictureSize(""+size.width+"x"+size.height);
 
                         if (CameraActivity.getCameraMode() == CameraActivity.CAMERA_MODE_PHOTO) {

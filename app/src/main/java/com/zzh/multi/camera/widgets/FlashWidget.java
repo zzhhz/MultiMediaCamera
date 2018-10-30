@@ -21,11 +21,16 @@ package com.zzh.multi.camera.widgets;
 
 import android.content.Context;
 
-import org.cyanogenmod.focal.CameraManager;
-import fr.xplod.focal.R;
+import com.zzh.multi.camera.CameraManager;
+import com.zzh.multi.camera.R;
+
 
 /**
- * Flash Widget, manages the flash settings
+ * @date: 2018/10/30
+ * @email: zzh_hz@126.com
+ * @QQ: 1299234582
+ * @author: zzh
+ * @description: FlashWidget.java
  */
 public class FlashWidget extends SimpleToggleWidget {
     private static final String KEY_REDEYE_REDUCTION = "redeye-reduction";

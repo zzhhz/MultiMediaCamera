@@ -48,13 +48,9 @@ import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
-import fr.xplod.focal.R;
+import com.zzh.multi.camera.R;
 
 import java.lang.reflect.Field;
-
-import static org.cyanogenmod.focal.ui.showcase.AnimationUtils.AnimationEndListener;
-import static org.cyanogenmod.focal.ui.showcase.AnimationUtils.AnimationStartListener;
-
 /**
  * A view which allows you to showcase areas of your app with an explanation.
  */
@@ -699,7 +695,7 @@ public class ShowcaseView extends RelativeLayout implements View.OnClickListener
                 Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.handy, null);
         addView(mHandy);
         mHandy.setRotation(mOrientation);
-        moveHand(offsetStartX, offsetStartY, offsetEndX, offsetEndY, new AnimationEndListener() {
+        moveHand(offsetStartX, offsetStartY, offsetEndX, offsetEndY, new AnimationUtils.AnimationEndListener() {
             @Override
             public void onAnimationEnd() {
                 removeView(mHandy);
@@ -708,7 +704,7 @@ public class ShowcaseView extends RelativeLayout implements View.OnClickListener
     }
 
     private void moveHand(float offsetStartX, float offsetStartY, float offsetEndX,
-            float offsetEndY, AnimationEndListener listener) {
+            float offsetEndY, AnimationUtils.AnimationEndListener listener) {
         AnimationUtils.createMovementAnimation(mHandy, showcaseX, showcaseY,
                 offsetStartX, offsetStartY,
                 offsetEndX, offsetEndY,
@@ -744,7 +740,7 @@ public class ShowcaseView extends RelativeLayout implements View.OnClickListener
     }
 
     private void fadeOutShowcase() {
-        AnimationUtils.createFadeOutAnimation(this, new AnimationEndListener() {
+        AnimationUtils.createFadeOutAnimation(this, new AnimationUtils.AnimationEndListener() {
             @Override
             public void onAnimationEnd() {
                 setVisibility(View.GONE);
@@ -764,7 +760,7 @@ public class ShowcaseView extends RelativeLayout implements View.OnClickListener
     }
 
     private void fadeInShowcase() {
-        AnimationUtils.createFadeInAnimation(this, new AnimationStartListener() {
+        AnimationUtils.createFadeInAnimation(this, new AnimationUtils.AnimationStartListener() {
             @Override
             public void onAnimationStart() {
                 setVisibility(View.VISIBLE);

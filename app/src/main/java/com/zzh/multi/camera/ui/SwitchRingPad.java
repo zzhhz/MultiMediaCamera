@@ -30,14 +30,14 @@ import android.graphics.Point;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.Util;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.Util;
+
 
 public class SwitchRingPad extends View implements AnimatorUpdateListener {
     public interface RingPadListener {

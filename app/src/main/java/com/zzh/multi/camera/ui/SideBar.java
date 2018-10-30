@@ -26,13 +26,12 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.HorizontalScrollView;
 import android.widget.ScrollView;
 
-import org.cyanogenmod.focal.CameraActivity;
-import org.cyanogenmod.focal.CameraCapabilities;
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.widgets.WidgetBase;
+import com.zzh.multi.camera.CameraActivity;
+import com.zzh.multi.camera.CameraCapabilities;
+import com.zzh.multi.camera.R;
+
 
 public class SideBar extends ScrollView {
     public final static String TAG = "SideBar";

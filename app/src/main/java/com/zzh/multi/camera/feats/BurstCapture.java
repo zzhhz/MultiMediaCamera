@@ -22,9 +22,9 @@ package com.zzh.multi.camera.feats;
 import android.os.Handler;
 import android.util.Log;
 
-import org.cyanogenmod.focal.CameraActivity;
-import org.cyanogenmod.focal.SnapshotManager;
-import org.cyanogenmod.focal.ui.ShutterButton;
+import com.zzh.multi.camera.CameraActivity;
+import com.zzh.multi.camera.SnapshotManager;
+import com.zzh.multi.camera.ui.ShutterButton;
 
 /**
  * Burst capture mode

@@ -30,9 +30,9 @@ import android.util.Log;
 import android.view.TextureView;
 import android.widget.FrameLayout;
 
-import org.cyanogenmod.focal.CameraActivity;
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.SnapshotManager;
+import com.zzh.multi.camera.CameraActivity;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.SnapshotManager;
 
 import java.io.File;
 import java.io.FileOutputStream;

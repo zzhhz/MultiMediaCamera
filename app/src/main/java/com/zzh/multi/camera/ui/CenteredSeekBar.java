@@ -29,12 +29,13 @@ import android.graphics.Paint.Style;
 import android.graphics.RectF;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 import android.widget.ImageView;
 
-import fr.xplod.focal.R;
+import com.zzh.multi.camera.R;
 
 import java.math.BigDecimal;
 
@@ -42,7 +43,7 @@ import java.math.BigDecimal;
  * Seek bar that starts from the middle
  * Based on RangeSeekBar at https://code.google.com/p/range-seek-bar/
  */
-public class CenteredSeekBar extends ImageView {
+public class CenteredSeekBar extends AppCompatImageView {
     private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Bitmap thumbImage = BitmapFactory.decodeResource(
             getResources(), R.drawable.seek_thumb_normal);

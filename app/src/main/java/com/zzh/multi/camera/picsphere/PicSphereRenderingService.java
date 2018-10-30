@@ -27,7 +27,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
-import fr.xplod.focal.R;
+import com.zzh.multi.camera.R;
 
 /**
  * Service that handles PicSphere rendering outside

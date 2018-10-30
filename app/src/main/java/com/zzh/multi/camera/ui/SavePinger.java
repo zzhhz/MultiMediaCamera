@@ -29,7 +29,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import fr.xplod.focal.R;
+import com.zzh.multi.camera.R;
+
 
 public class SavePinger extends View {
     public final static String TAG = "SavePinger";

@@ -1,22 +1,3 @@
-/*
- * Copyright (C) 2013 Guillaume Lesniak
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA  02110-1301, USA.
- */
-
 package com.zzh.multi.camera;
 
 import android.app.Activity;
@@ -47,27 +28,32 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.cyanogenmod.focal.feats.CaptureTransformer;
-import org.cyanogenmod.focal.feats.SoftwareHdrCapture;
-import org.cyanogenmod.focal.pano.MosaicProxy;
-import org.cyanogenmod.focal.picsphere.PicSphereCaptureTransformer;
-import org.cyanogenmod.focal.picsphere.PicSphereManager;
-import org.cyanogenmod.focal.ui.CircleTimerView;
-import org.cyanogenmod.focal.ui.ExposureHudRing;
-import org.cyanogenmod.focal.ui.FocusHudRing;
-import org.cyanogenmod.focal.ui.Notifier;
-import org.cyanogenmod.focal.ui.PanoProgressBar;
-import org.cyanogenmod.focal.ui.ReviewDrawer;
-import org.cyanogenmod.focal.ui.SavePinger;
-import org.cyanogenmod.focal.ui.ShutterButton;
-import org.cyanogenmod.focal.ui.SideBar;
-import org.cyanogenmod.focal.ui.SwitchRingPad;
-import org.cyanogenmod.focal.ui.ThumbnailFlinger;
-import org.cyanogenmod.focal.ui.WidgetRenderer;
-import org.cyanogenmod.focal.ui.showcase.ShowcaseView;
+import com.zzh.multi.camera.feats.CaptureTransformer;
+import com.zzh.multi.camera.feats.SoftwareHdrCapture;
+import com.zzh.multi.camera.pano.MosaicProxy;
+import com.zzh.multi.camera.picsphere.PicSphereCaptureTransformer;
+import com.zzh.multi.camera.picsphere.PicSphereManager;
+import com.zzh.multi.camera.ui.CircleTimerView;
+import com.zzh.multi.camera.ui.ExposureHudRing;
+import com.zzh.multi.camera.ui.FocusHudRing;
+import com.zzh.multi.camera.ui.Notifier;
+import com.zzh.multi.camera.ui.PanoProgressBar;
+import com.zzh.multi.camera.ui.ReviewDrawer;
+import com.zzh.multi.camera.ui.SavePinger;
+import com.zzh.multi.camera.ui.ShutterButton;
+import com.zzh.multi.camera.ui.SideBar;
+import com.zzh.multi.camera.ui.SwitchRingPad;
+import com.zzh.multi.camera.ui.ThumbnailFlinger;
+import com.zzh.multi.camera.ui.WidgetRenderer;
+import com.zzh.multi.camera.ui.showcase.ShowcaseView;
 
-import fr.xplod.focal.R;
-
+/**
+ * @date: 2018/10/30
+ * @email: zzh_hz@126.com
+ * @QQ: 1299234582
+ * @author: zzh
+ * @description: CameraActivity.java
+ */
 public class CameraActivity extends Activity implements CameraManager.CameraReadyListener,
         ShowcaseView.OnShowcaseEventListener {
     public final static String TAG = "CameraActivity";
@@ -178,18 +164,18 @@ public class CameraActivity extends Activity implements CameraManager.CameraRead
         mSideBar = (SideBar) findViewById(R.id.sidebar_scroller);
         mWidgetRenderer = (WidgetRenderer) findViewById(R.id.widgets_container);
         mSavePinger = (SavePinger) findViewById(R.id.save_pinger);
-        mTimerView = (CircleTimerView) findViewById(R.id.timer_view);
-        mHelperText = (TextView) findViewById(R.id.txt_helper);
-        mPicSphereUndo = (Button) findViewById(R.id.btn_picsphere_undo);
+        mTimerView = findViewById(R.id.timer_view);
+        mHelperText = findViewById(R.id.txt_helper);
+        mPicSphereUndo = findViewById(R.id.btn_picsphere_undo);
 
-        mSwitchRingPad = (SwitchRingPad) findViewById(R.id.switch_ring_pad);
+        mSwitchRingPad =  findViewById(R.id.switch_ring_pad);
         mSwitchRingPad.setListener(new MainRingPadListener());
 
-        mPanoProgressBar = (PanoProgressBar) findViewById(R.id.panorama_progress_bar);
-        mRecTimerContainer = (ViewGroup) findViewById(R.id.recording_timer_container);
-        mNotifier = (Notifier) findViewById(R.id.notifier_container);
+        mPanoProgressBar = findViewById(R.id.panorama_progress_bar);
+        mRecTimerContainer = findViewById(R.id.recording_timer_container);
+        mNotifier =  findViewById(R.id.notifier_container);
 
-        mReviewDrawer = (ReviewDrawer) findViewById(R.id.review_drawer);
+        mReviewDrawer = findViewById(R.id.review_drawer);
 
         // Create orientation listener. This should be done first because it
         // takes some time to get first orientation.

@@ -23,7 +23,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
 
-import org.cyanogenmod.focal.SnapshotManager;
+import com.zzh.multi.camera.SnapshotManager;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -75,8 +75,8 @@ public class SoftwareHdrProcessor {
 
     private void run(String command) throws IOException {
         Runtime rt = Runtime.getRuntime();
-        Process proc = rt.exec(command, new String[]{"PATH="+mPathPrefix+":/system/bin",
-                "LD_LIBRARY_PATH="+mPathPrefix+":/system/lib"});
+        Process proc = rt.exec(command, new String[]{"PATH=" + mPathPrefix + ":/system/bin",
+                "LD_LIBRARY_PATH=" + mPathPrefix + ":/system/lib"});
         mProcStdOut = new BufferedReader(new
                 InputStreamReader(proc.getInputStream()));
         mProcStdErr = new BufferedReader(new
@@ -115,7 +115,7 @@ public class SoftwareHdrProcessor {
             // Isn't there any way to update gallery data without having to reload/save
             // the JPEG file? Because we have it already, we could just move it.
             byte[] jpegData;
-            RandomAccessFile f = new RandomAccessFile(mTempPath+"/final.jpg", "r");
+            RandomAccessFile f = new RandomAccessFile(mTempPath + "/final.jpg", "r");
             try {
                 // Get and check length
                 long longlength = f.length();
@@ -130,7 +130,7 @@ public class SoftwareHdrProcessor {
                 f.close();
             }
 
-            mSnapManager.prepareNamerUri(100,100);
+            mSnapManager.prepareNamerUri(100, 100);
             mOutputUri = mSnapManager.getNamerUri();
             mOutputTitle = mSnapManager.getNamerTitle();
             mSnapManager.saveImage(mOutputUri, mOutputTitle, 100, 100, orientation, jpegData);
@@ -171,7 +171,7 @@ public class SoftwareHdrProcessor {
             }
         }
 
-        run("align_image_stack -v -v -v -C -g 4 -a "+mTempPath+"/project " + filesStr);
+        run("align_image_stack -v -v -v -C -g 4 -a " + mTempPath + "/project " + filesStr);
         consumeProcLogs();
 
         Log.d(TAG, "Align Image Stack... done");
@@ -192,7 +192,7 @@ public class SoftwareHdrProcessor {
                 files += " " + filePath;
             }
         }
-        run("enfuse -o "+mTempPath+"/final.jpg --compression=jpeg " + files);
+        run("enfuse -o " + mTempPath + "/final.jpg --compression=jpeg " + files);
         consumeProcLogs();
 
         Log.d(TAG, "Enfuse... done");

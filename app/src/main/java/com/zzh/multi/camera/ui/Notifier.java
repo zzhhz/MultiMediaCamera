@@ -27,12 +27,15 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.Util;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.Util;
 
 /**
- * Little notifier that comes in from the side of the screen
- * to tell the user about something quickly
+ * @date: 2018/10/30
+ * @email: zzh_hz@126.com
+ * @QQ: 1299234582
+ * @author: zzh
+ * @description: Notifier.java
  */
 public class Notifier extends LinearLayout {
     private TextView mTextView;

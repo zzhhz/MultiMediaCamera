@@ -1,22 +1,3 @@
-/*
- * Copyright (C) 2013 Guillaume Lesniak
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA  02110-1301, USA.
- */
-
 package com.zzh.multi.camera;
 
 import android.content.ContentResolver;
@@ -43,10 +24,10 @@ import com.drew.imaging.jpeg.JpegProcessingException;
 import com.drew.metadata.Directory;
 import com.drew.metadata.Metadata;
 import com.drew.metadata.Tag;
+import com.zzh.multi.camera.feats.AutoPictureEnhancer;
+import com.zzh.multi.camera.feats.PixelBuffer;
+import com.zzh.multi.camera.widgets.SimpleToggleWidget;
 
-import org.cyanogenmod.focal.feats.AutoPictureEnhancer;
-import org.cyanogenmod.focal.feats.PixelBuffer;
-import org.cyanogenmod.focal.widgets.SimpleToggleWidget;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
@@ -56,10 +37,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.xplod.focal.R;
-
 /**
- * This class manages taking snapshots and videos from Camera
+ * @date: 2018/10/30
+ * @email: zzh_hz@126.com
+ * @QQ: 1299234582
+ * @author: zzh
+ * @description: SnapshotManager.java
  */
 public class SnapshotManager {
     public final static String TAG = "SnapshotManager";

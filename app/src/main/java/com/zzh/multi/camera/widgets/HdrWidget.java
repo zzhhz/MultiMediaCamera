@@ -22,8 +22,8 @@ package com.zzh.multi.camera.widgets;
 import android.content.Context;
 import android.hardware.Camera;
 
-import org.cyanogenmod.focal.CameraManager;
-import fr.xplod.focal.R;
+import com.zzh.multi.camera.CameraManager;
+import com.zzh.multi.camera.R;
 
 import java.util.List;
 

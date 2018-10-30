@@ -21,13 +21,13 @@ package com.zzh.multi.camera.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.cyanogenmod.focal.CameraManager;
-import fr.xplod.focal.R;
+import com.zzh.multi.camera.CameraManager;
+import com.zzh.multi.camera.R;
+
 
 /**
  * Exposure ring HUD that lets user select exposure metering point

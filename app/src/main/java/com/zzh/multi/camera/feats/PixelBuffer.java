@@ -25,8 +25,8 @@ import android.graphics.Bitmap;
 import android.opengl.GLSurfaceView;
 import android.util.Log;
 
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.Util;
+
+import com.zzh.multi.camera.R;
 
 import java.nio.IntBuffer;
 

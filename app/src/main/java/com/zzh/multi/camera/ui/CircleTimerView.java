@@ -30,7 +30,7 @@ import android.os.SystemClock;
 import android.util.AttributeSet;
 import android.view.View;
 
-import fr.xplod.focal.R;
+import com.zzh.multi.camera.R;
 
 public class CircleTimerView extends View {
 

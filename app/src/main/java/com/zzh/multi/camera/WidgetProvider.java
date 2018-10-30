@@ -27,8 +27,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
-import fr.xplod.focal.R;
-
 public class WidgetProvider extends AppWidgetProvider {
     public void onUpdate(final Context context, AppWidgetManager appWidgetManager,
             int[] appWidgetIds) {

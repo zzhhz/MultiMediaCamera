@@ -22,10 +22,10 @@ package com.zzh.multi.camera.widgets;
 import android.content.Context;
 import android.hardware.Camera;
 
-import org.cyanogenmod.focal.CameraManager;
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.SettingsStorage;
-import org.cyanogenmod.focal.ui.CenteredSeekBar;
+import com.zzh.multi.camera.CameraManager;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.SettingsStorage;
+import com.zzh.multi.camera.ui.CenteredSeekBar;
 
 /**
  * Exposure compensation setup widget

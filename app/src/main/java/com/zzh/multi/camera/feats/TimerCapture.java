@@ -29,10 +29,12 @@ import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.util.Log;
 
-import org.cyanogenmod.focal.CameraActivity;
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.SnapshotManager;
-import org.cyanogenmod.focal.ui.ShutterButton;
+import com.zzh.multi.camera.CameraActivity;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.SnapshotManager;
+import com.zzh.multi.camera.ui.ShutterButton;
+
+
 
 import java.util.ArrayList;
 
@@ -131,8 +133,7 @@ public class TimerCapture extends CaptureTransformer implements RecognitionListe
             mAudioManager.setStreamMute(AudioManager.STREAM_SYSTEM, true);
         }
 
-        //Log.d(TAG,"Starting speach recog");
-        // TODO: mPhotoModule.updateVoiceShutterIndicator(true);
+        //  mPhotoModule.updateVoiceShutterIndicator(true);
         mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
     }
 

@@ -22,10 +22,9 @@ package com.zzh.multi.camera.widgets;
 import android.hardware.Camera;
 import android.view.View;
 
-import org.cyanogenmod.focal.CameraActivity;
-import fr.xplod.focal.R;
-import org.cyanogenmod.focal.feats.TimerCapture;
-
+import com.zzh.multi.camera.CameraActivity;
+import com.zzh.multi.camera.R;
+import com.zzh.multi.camera.feats.TimerCapture;
 /**
  * Timer mode and voice shutter widget
  */
